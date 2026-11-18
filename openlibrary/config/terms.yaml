@@ -1,0 +1,69 @@
+format_version: 1
+status: frozen
+frozen_utc: '2026-07-20'
+explicit_climate:
+- climate fiction
+- cli-fi
+- clifi
+- climate change
+- climate crisis
+- global warming
+- climatic change
+- anthropogenic warming
+- anthropocene fiction
+high_specific_motif:
+- climate refugee
+- climate refugees
+- climate migration
+- climate displacement
+- geoengineering
+- solar radiation management
+- carbon capture
+contextual_motif_families:
+  sea_level:
+  - sea level rise
+  - rising seas
+  - rising oceans
+  water_food:
+  - water scarcity
+  - crop failure
+  - crop failures
+  - food shortage
+  - food shortages
+  ecosystem:
+  - ecological collapse
+  - environmental collapse
+  - biodiversity loss
+  - species loss
+  - ecosystem collapse
+  heat_fire:
+  - chronic heat
+  - extreme heat
+  - repeated wildfires
+  energy_transition:
+  - fossil fuel
+  - fossil fuels
+  - oil company
+  - oil companies
+  - decarbonization
+environmental_genre_context:
+- ecofiction
+- eco-fiction
+- environmental fiction
+- eco dystopia
+- ecodystopia
+- solarpunk
+broad_hard_negative:
+- drought
+- flood
+- wildfire
+- heatwave
+- extinction
+- migration
+- mining
+- pipeline
+- billionaire
+- post-apocalyptic
+- whale
+- last animal
+- last forest

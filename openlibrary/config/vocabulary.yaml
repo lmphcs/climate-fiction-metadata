@@ -1,0 +1,36 @@
+format_version: 1
+status: frozen_before_term_diagnostic
+source_snapshot: '2026-06-30'
+input:
+  eligible_root: '{workdir}/openlibrary/eligible'
+  complete_marker: '{workdir}/openlibrary/eligible/COMPLETE.json'
+  expected_rows: 13754720
+  expected_shards: 128
+lexical_contract:
+  source_terms_file: openlibrary/config/terms.yaml
+  source_group: explicit_climate
+  matching: case_insensitive_ascii_word_boundaries
+  explicit_terms:
+  - climate fiction
+  - cli-fi
+  - clifi
+  - climate change
+  - climate crisis
+  - global warming
+  - climatic change
+  - anthropogenic warming
+  - anthropocene fiction
+scope:
+  first_year: 1990
+  last_year: 2025
+  exploratory_post_peak_first_year: 2010
+  fields:
+  - title
+  - subjects
+  - description
+  - any
+output:
+  directory: '{workdir}/openlibrary/vocabulary'
+claim_guardrail: Results measure temporal changes among the nine configured exact
+  phrases in supplied Open Library metadata, not underlying thematic prevalence or
+  the cause of lexical change.

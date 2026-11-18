@@ -1,0 +1,231 @@
+{
+  "overall": {
+    "records": 100,
+    "fiction_status": {
+      "FICTION": 59,
+      "NONFICTION": 38,
+      "OTHER_LITERARY": 1,
+      "UNCLEAR": 2
+    },
+    "derived_status": {
+      "NEGATIVE": 56,
+      "POSITIVE": 38,
+      "UNRESOLVED": 6
+    },
+    "positive_composition": {
+      "climate_explicit": 32,
+      "implicit_or_environmental": 6
+    }
+  },
+  "strata": {
+    "explicit_only": {
+      "positive_count": 18,
+      "records": 20,
+      "fiction_status": {
+        "FICTION": 19,
+        "NONFICTION": 1
+      },
+      "derived_status": {
+        "NEGATIVE": 1,
+        "POSITIVE": 18,
+        "UNRESOLVED": 1
+      }
+    },
+    "motif_only": {
+      "positive_count": 2,
+      "records": 20,
+      "fiction_status": {
+        "FICTION": 3,
+        "NONFICTION": 17
+      },
+      "derived_status": {
+        "NEGATIVE": 18,
+        "POSITIVE": 2
+      }
+    },
+    "outside_pool": {
+      "positive_count": 1,
+      "records": 20,
+      "fiction_status": {
+        "FICTION": 18,
+        "OTHER_LITERARY": 1,
+        "UNCLEAR": 1
+      },
+      "derived_status": {
+        "NEGATIVE": 17,
+        "POSITIVE": 1,
+        "UNRESOLVED": 2
+      }
+    },
+    "route_overlap": {
+      "positive_count": 14,
+      "records": 20,
+      "fiction_status": {
+        "FICTION": 14,
+        "NONFICTION": 5,
+        "UNCLEAR": 1
+      },
+      "derived_status": {
+        "NEGATIVE": 5,
+        "POSITIVE": 14,
+        "UNRESOLVED": 1
+      }
+    },
+    "semantic_only": {
+      "positive_count": 3,
+      "records": 20,
+      "fiction_status": {
+        "FICTION": 5,
+        "NONFICTION": 15
+      },
+      "derived_status": {
+        "NEGATIVE": 15,
+        "POSITIVE": 3,
+        "UNRESOLVED": 2
+      }
+    }
+  },
+  "retest_exact": "10/10",
+  "trends": [
+    {
+      "id": "primary_all_any_per_work",
+      "population": "all_works",
+      "field": "any",
+      "denominator": "works",
+      "through_year": "2025",
+      "role": "primary",
+      "status": "estimated",
+      "years": "36",
+      "successes": "16791",
+      "trials": "13754720",
+      "odds_ratio_per_decade": "1.050855737357975",
+      "wald_95_percent_low": "1.0343500571559872",
+      "wald_95_percent_high": "1.067624807576762",
+      "wald_z": "6.141244405529913",
+      "wald_p_two_sided": "8.187749004164006e-10",
+      "fitted_rate_per_10000_first_year": "10.999875613603333",
+      "fitted_rate_per_10000_last_year": "13.082720321166345",
+      "model": "grouped_binomial_logit_on_calendar_year"
+    },
+    {
+      "id": "recent_cutoff_all_any_per_work",
+      "population": "all_works",
+      "field": "any",
+      "denominator": "works",
+      "through_year": "2023",
+      "role": "sensitivity",
+      "status": "estimated",
+      "years": "34",
+      "successes": "16215",
+      "trials": "13395287",
+      "odds_ratio_per_decade": "1.0403815222330997",
+      "wald_95_percent_low": "1.0235782989109805",
+      "wald_95_percent_high": "1.057460589928154",
+      "wald_z": "4.765221935079176",
+      "wald_p_two_sided": "1.8864589074294224e-06",
+      "fitted_rate_per_10000_first_year": "11.15770060064277",
+      "fitted_rate_per_10000_last_year": "12.712845345773635",
+      "model": "grouped_binomial_logit_on_calendar_year"
+    },
+    {
+      "id": "catalog_fiction_any_per_work",
+      "population": "catalog_fiction",
+      "field": "any",
+      "denominator": "works",
+      "through_year": "2025",
+      "role": "sensitivity",
+      "status": "estimated",
+      "years": "36",
+      "successes": "365",
+      "trials": "1301578",
+      "odds_ratio_per_decade": "1.308270545319031",
+      "wald_95_percent_low": "1.1648077426346888",
+      "wald_95_percent_high": "1.4694028525925968",
+      "wald_z": "4.534341671633612",
+      "wald_p_two_sided": "5.778342721719228e-06",
+      "fitted_rate_per_10000_first_year": "1.6090650706776723",
+      "fitted_rate_per_10000_last_year": "4.120083302133467",
+      "model": "grouped_binomial_logit_on_calendar_year"
+    },
+    {
+      "id": "no_year_conflict_any_per_work",
+      "population": "no_year_conflict",
+      "field": "any",
+      "denominator": "works",
+      "through_year": "2025",
+      "role": "sensitivity",
+      "status": "estimated",
+      "years": "36",
+      "successes": "16787",
+      "trials": "13745279",
+      "odds_ratio_per_decade": "1.0501829941194207",
+      "wald_95_percent_low": "1.033684088827829",
+      "wald_95_percent_high": "1.0669452428045727",
+      "wald_z": "6.060557568522343",
+      "wald_p_two_sided": "1.3565048844217594e-09",
+      "fitted_rate_per_10000_first_year": "11.019349213317135",
+      "fitted_rate_per_10000_last_year": "13.076572602959978",
+      "model": "grouped_binomial_logit_on_calendar_year"
+    },
+    {
+      "id": "work_year_supported_any_per_work",
+      "population": "work_year_supported",
+      "field": "any",
+      "denominator": "works",
+      "through_year": "2025",
+      "role": "sensitivity",
+      "status": "estimated",
+      "years": "31",
+      "successes": "967",
+      "trials": "1070310",
+      "odds_ratio_per_decade": "2.0614822329542344",
+      "wald_95_percent_low": "1.83486818009978",
+      "wald_95_percent_high": "2.316084088697248",
+      "wald_z": "12.175884016832798",
+      "wald_p_two_sided": "4.178421763755725e-34",
+      "fitted_rate_per_10000_first_year": "4.508376537209517",
+      "fitted_rate_per_10000_last_year": "56.4140966070053",
+      "model": "grouped_binomial_logit_on_calendar_year"
+    },
+    {
+      "id": "subjects_per_available",
+      "population": "all_works",
+      "field": "subjects",
+      "denominator": "field_available",
+      "through_year": "2025",
+      "role": "coverage_sensitivity",
+      "status": "estimated",
+      "years": "36",
+      "successes": "4531",
+      "trials": "7196910",
+      "odds_ratio_per_decade": "1.108705321179783",
+      "wald_95_percent_low": "1.0750199942658163",
+      "wald_95_percent_high": "1.1434461645077265",
+      "wald_z": "6.555395914572725",
+      "wald_p_two_sided": "5.5494445271271e-11",
+      "fitted_rate_per_10000_first_year": "5.297559643267678",
+      "fitted_rate_per_10000_last_year": "7.60032640952274",
+      "model": "grouped_binomial_logit_on_calendar_year"
+    },
+    {
+      "id": "description_per_available",
+      "population": "all_works",
+      "field": "description",
+      "denominator": "field_available",
+      "through_year": "2025",
+      "role": "coverage_sensitivity",
+      "status": "estimated",
+      "years": "36",
+      "successes": "4719",
+      "trials": "1014530",
+      "odds_ratio_per_decade": "2.3857208207022733",
+      "wald_95_percent_low": "2.286484269565357",
+      "wald_95_percent_high": "2.4892643741713867",
+      "wald_z": "40.112638696961774",
+      "wald_p_two_sided": "0.0",
+      "fitted_rate_per_10000_first_year": "8.557600647288064",
+      "fitted_rate_per_10000_last_year": "176.46568481032287",
+      "model": "grouped_binomial_logit_on_calendar_year"
+    }
+  ]
+}

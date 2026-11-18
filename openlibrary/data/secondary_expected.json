@@ -1,0 +1,25 @@
+{
+  "rows": 1054,
+  "model_positive_rows": 126,
+  "grounded_model_positive_rows": 65,
+  "wave_b": {
+    "average_precision": 0.9945054945054945,
+    "binary_balanced_accuracy": 0.9321266968325792,
+    "fiction_exact_agreement": 0.9333333333333333,
+    "gold_positive_rows": 13,
+    "predicted_fiction_status": {
+      "FICTION": 19,
+      "NONFICTION": 10,
+      "OTHER_LITERARY": 1
+    },
+    "predicted_positive_rows": 13,
+    "predicted_relevance_raw": {
+      "CLIMATE_EXPLICIT": 10,
+      "IMPLICIT_OR_ENVIRONMENTAL": 8,
+      "NONE": 12
+    },
+    "relevance_exact_agreement": 0.75,
+    "relevance_rows": 20,
+    "rows": 30
+  }
+}

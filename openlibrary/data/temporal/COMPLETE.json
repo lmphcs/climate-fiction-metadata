@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "rows_scanned": 13754720,
+  "artifacts": {
+    "annual_counts.csv": {
+      "sha256": "67cf4dc751f5bf96f649ff337312bdda54ec9cd41f915452f1ebdbb73fc64b77",
+      "size_bytes": 50308
+    }
+  }
+}

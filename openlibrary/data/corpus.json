@@ -1,0 +1,19 @@
+{
+  "eligible_works": 13754720,
+  "fiction_likely": 1301578,
+  "work_description": 962612,
+  "best_description": 1014530,
+  "subjects": 7196910,
+  "author_names": 13499202,
+  "year_sources": {
+    "edition_only_earliest_date": 12684410,
+    "work_and_edition_agree": 1044422,
+    "edition_within_2_years_min": 16199,
+    "edition_earlier_supported_override": 1083,
+    "work_preferred_edition_singleton_ignored": 8149,
+    "work_preferred_edition_later": 209,
+    "work_within_2_years_min": 233,
+    "work_first_publish_date": 15
+  },
+  "year_conflicts": 9441
+}

@@ -1,0 +1,67 @@
+{
+  "release_date": "2026-11-18",
+  "scope": "Open Library only",
+  "manuscript": {
+    "title": "Finding Climate-Related Fiction in Open Library: A Study of Bibliographic Metadata",
+    "sha256": "c6f6c22a533eb91e0896519aafdb67af9781d348cee3d1059528fdfb6580c934"
+  },
+  "quick": {
+    "status": "passed",
+    "python": "3.12.13",
+    "isolated_environment": true,
+    "arrow_installed": false,
+    "arrow_imported": false,
+    "requirements_sha256": "47e00f0dd54f8a1d71e527412d51364f3231b6efe05af6a20a5900b06456914d",
+    "byte_identical_reference_outputs": 14,
+    "paper_table_cells_and_reported_point_values_verified": true,
+    "evaluation_records": 100,
+    "positive": 38,
+    "explicit_positive": 32,
+    "implicit_environmental_positive": 6,
+    "retest_exact": "10/10",
+    "eligible_works": 13754720,
+    "explicit_term_matches": 16791,
+    "secondary_records": 1054,
+    "secondary_positive": 126,
+    "secondary_grounded_positive": 65,
+    "figures": 4
+  },
+  "pipeline": {
+    "status": "synthetic_smoke_passed",
+    "source_works": 15,
+    "eligible_works": 14,
+    "retrieval_candidates": 10,
+    "evaluation_records": 5,
+    "strata": 5,
+    "positive": 2,
+    "stages": [
+      "acquire",
+      "prepare",
+      "retrieve",
+      "temporal",
+      "evaluate"
+    ],
+    "changed_evidence_rejected": true,
+    "new_human_annotation_path_checked": true,
+    "encoder": "deterministic test double; no real model inference",
+    "full_code_config_source_and_prompt_references_checked": true,
+    "behavior_checks": 12,
+    "source_scale_rerun": false,
+    "actual_model_inference_rerun": false
+  },
+  "plots": {
+    "numeric_inputs_verified": true,
+    "pinned_environment_pdf_sha256": {
+      "annual_corpus_coverage_v1.pdf": "ca132be3c146dc6b7e2291b1b0e70a935fce47ea77519dff4a39b6b491e98e41",
+      "catalog_fiction_vs_other_relative_v1.pdf": "287c6021f7dd0a51e2380abe287f57206e943da0d34437815bbfcb7439b4a0ca",
+      "full_corpus_temporal_relative_v2.pdf": "d7cf7bb5336f8a8544b88053939dddc327be7763065fb6adc4a679dc50314f22",
+      "vocabulary_trends_relative.pdf": "22adc1eee1859294bd3bd05f39b145796d83e81ba0e8f708dc48e5d36d34ce30"
+    },
+    "archived_manuscript_image_byte_identity": false,
+    "note": "The same plotting functions and data produce slightly different image dimensions in the pinned release environment."
+  },
+  "limits": [
+    "Original primary annotation CSV unavailable; verified final derivative included.",
+    "Full-corpus processing and actual model inference were not rerun for this release."
+  ]
+}

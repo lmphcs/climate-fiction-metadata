@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this software and the associated CHR2027 paper when reusing the methods or annotations."
+type: software
+title: "Finding Climate-Related Fiction in Open Library: Reproducibility Package"
+authors:
+  - family-names: Pivovarova
+    given-names: Lidia
+    affiliation: University of Helsinki
+date-released: 2026-11-18
+license:
+  - MIT
+  - CC-BY-4.0

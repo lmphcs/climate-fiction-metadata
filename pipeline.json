@@ -1,0 +1,33 @@
+{
+  "sources": "sources.json",
+  "buckets": 128,
+  "evaluation": "openlibrary/config/evaluation.yaml",
+  "terms": "openlibrary/config/terms.yaml",
+  "temporal": "openlibrary/config/temporal.yaml",
+  "vocabulary": "openlibrary/config/vocabulary.yaml",
+  "resources": {
+    "prepare": {
+      "aggregation_original_memory_gib": 1000,
+      "aggregation_original_cpus": 1,
+      "aggregation_original_walltime_hours": 24,
+      "disk_gb_budget": 200
+    },
+    "retrieve": {
+      "original_memory_gib": 48,
+      "original_cpus": 8,
+      "original_walltime_hours": 16,
+      "device": "cpu"
+    },
+    "llm": {
+      "original_gpu": "NVIDIA GH200",
+      "original_gpu_memory_fraction": 0.85,
+      "runtime": "python-vllm/0.19.1",
+      "separate_environment": true
+    },
+    "temporal": {
+      "original_memory_gib": 64,
+      "original_cpus": 4,
+      "original_walltime_hours": 4
+    }
+  }
+}

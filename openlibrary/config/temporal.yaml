@@ -1,0 +1,92 @@
+format_version: 1
+status: frozen_before_full_corpus_analysis
+source_snapshot: '2026-06-30'
+input:
+  eligible_root: '{workdir}/openlibrary/eligible'
+  complete_marker: '{workdir}/openlibrary/eligible/COMPLETE.json'
+  expected_rows: 13754720
+  expected_shards: 128
+lexical_contract:
+  source_terms_file: openlibrary/config/terms.yaml
+  source_group: explicit_climate
+  matching: case_insensitive_ascii_word_boundaries
+  explicit_terms:
+  - climate fiction
+  - cli-fi
+  - clifi
+  - climate change
+  - climate crisis
+  - global warming
+  - climatic change
+  - anthropogenic warming
+  - anthropocene fiction
+scope:
+  first_year: 1990
+  last_year: 2025
+  periods:
+  - - 1990
+    - 1998
+  - - 1999
+    - 2007
+  - - 2008
+    - 2016
+  - - 2017
+    - 2025
+  populations:
+  - all_works
+  - catalog_fiction
+  - no_year_conflict
+  - work_year_supported
+  fields:
+  - title
+  - subjects
+  - description
+  - any
+trend_tests:
+- id: primary_all_any_per_work
+  population: all_works
+  field: any
+  denominator: works
+  through_year: 2025
+  role: primary
+- id: recent_cutoff_all_any_per_work
+  population: all_works
+  field: any
+  denominator: works
+  through_year: 2023
+  role: sensitivity
+- id: catalog_fiction_any_per_work
+  population: catalog_fiction
+  field: any
+  denominator: works
+  through_year: 2025
+  role: sensitivity
+- id: no_year_conflict_any_per_work
+  population: no_year_conflict
+  field: any
+  denominator: works
+  through_year: 2025
+  role: sensitivity
+- id: work_year_supported_any_per_work
+  population: work_year_supported
+  field: any
+  denominator: works
+  through_year: 2025
+  role: sensitivity
+- id: subjects_per_available
+  population: all_works
+  field: subjects
+  denominator: field_available
+  through_year: 2025
+  role: coverage_sensitivity
+- id: description_per_available
+  population: all_works
+  field: description
+  denominator: field_available
+  through_year: 2025
+  role: coverage_sensitivity
+output:
+  directory: '{workdir}/openlibrary/temporal'
+claim_guardrail: Results measure explicit climate framing and discoverability in supplied
+  Open Library paratext, not the prevalence of all climate fiction, complete book
+  content, author beliefs, reader beliefs, or corpus-wide recall.

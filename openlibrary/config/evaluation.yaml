@@ -1,0 +1,70 @@
+format_version: 1
+status: frozen
+snapshot: '2026-06-30'
+split: evaluation
+frozen_utc: '2026-07-20'
+codebook_version: '1.0'
+seed: 20260720
+per_stratum: 20
+retest_per_stratum: 2
+model:
+  id: intfloat/e5-small-v2
+  revision: ffb93f3bd4047442299a41ebb6fa998a38507c52
+  max_sequence_length: 512
+  batch_size: 64
+  normalize_embeddings: true
+document:
+  prefix: 'passage: '
+  order:
+  - title
+  - description
+  - subjects
+  max_subjects: 30
+  max_description_characters: 6000
+queries:
+- id: direct_climate
+  text: 'query: fiction explicitly represented as concerning climate change, global
+    warming, or the climate crisis'
+- id: systemic_consequences
+  text: 'query: fiction represented through systemic climate consequences such as
+    persistent sea-level rise, chronic extreme heat, repeated wildfire, drought, and
+    crop failure'
+- id: displacement_systems
+  text: 'query: fiction represented through climate-driven migration, displacement,
+    water scarcity, food-system disruption, or transformed settlements'
+- id: intervention_transition
+  text: 'query: fiction represented through climate intervention or transition, including
+    geoengineering, decarbonization, carbon capture, or fossil-fuel phaseout'
+selection:
+  semantic_top_k: 100
+  require_description: true
+  candidate_union_any:
+  - fiction_likely
+  - explicit_route
+  - motif_route
+  prefer_tiers:
+  - fiction_clean
+  - fiction_conflict
+  - lexical_no_fiction_signal
+  strata:
+  - explicit_only
+  - motif_only
+  - semantic_only
+  - route_overlap
+  - outside_pool
+  definition:
+    explicit_only: explicit anchor, no motif route, outside semantic top-k
+    motif_only: motif route, no explicit anchor, outside semantic top-k
+    semantic_only: semantic top-k, no explicit or motif route
+    route_overlap: semantic top-k and explicit or motif route
+    outside_pool: no explicit or motif route and outside semantic top-k
+evaluation:
+  unique_records: 100
+  retest_records: 10
+  primary_id_prefix: CROW-EVAL-P
+  retest_id_prefix: CROW-EVAL-R
+  primary_filename: evaluation_primary_100_blinded.csv
+  retest_filename: evaluation_retest_10_blinded.csv
+  key_filename: evaluation_100_key.csv
+  minimum_retest_delay_days: 7
+  maximum_retest_delay_days: 10
